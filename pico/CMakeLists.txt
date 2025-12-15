@@ -21,6 +21,7 @@ add_executable(${PROJECT_NAME}
     avrprog.c
     avr_devices.c
     stk500v1.c
+    usb_descriptors.c
 )
 
 target_link_libraries(${PROJECT_NAME}
