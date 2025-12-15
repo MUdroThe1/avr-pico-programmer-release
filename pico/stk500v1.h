@@ -5,6 +5,9 @@
 #define Cmnd_STK_GET_SYNC         0x30
 #define Cmnd_STK_GET_SIGN_ON      0x31
 #define Cmnd_STK_SET_PARAMETER    0x40
+#define Cmnd_STK_GET_PARAMETER    0x41
+#define Cmnd_STK_SET_DEVICE       0x42
+#define Cmnd_STK_SET_DEVICE_EXT   0x45
 #define Cmnd_STK_ENTER_PROGMODE   0x50
 #define Cmnd_STK_LEAVE_PROGMODE   0x51
 #define Cmnd_STK_CHIP_ERASE       0x52
