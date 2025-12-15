@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.13)
 
-# Always import the bundled SDK relative to this file
-include(${CMAKE_CURRENT_LIST_DIR}/../pico-sdk/external/pico_sdk_import.cmake)
 
-# Optional extras if present
-if(EXISTS "${CMAKE_CURRENT_LIST_DIR}/../pico-extras/external/pico_extras_import.cmake")
-    include(${CMAKE_CURRENT_LIST_DIR}/../pico-extras/external/pico_extras_import.cmake)
-endif()
+include(${CMAKE_SOURCE_DIR}/../../pico-sdk/external/pico_sdk_import.cmake)
+
+include(${CMAKE_SOURCE_DIR}/../../pico-extras/external/pico_extras_import.cmake)
+
+
+# Do not import pico-extras to avoid accidental path mixing
 
 project(prog C CXX ASM)
 
