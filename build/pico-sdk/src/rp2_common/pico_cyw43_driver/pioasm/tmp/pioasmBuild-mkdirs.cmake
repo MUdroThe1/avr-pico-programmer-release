@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/tools/pioasm"
+  "/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico-sdk/tools/pioasm"
   "/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pioasm"
   "/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pioasm-install"
   "/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp"

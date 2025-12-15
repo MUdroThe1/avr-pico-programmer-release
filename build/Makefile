@@ -333,6 +333,30 @@ avrprog.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/avrprog.c.s
 .PHONY : avrprog.c.s
 
+home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o: home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o
+
+# target to build an object file
+home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
+
+home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i: home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i
+
+# target to preprocess a source file
+home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+
+home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s: home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s
+
+# target to generate assembly for a file
+home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+
 home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
 
@@ -2005,30 +2029,6 @@ home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
-home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o: home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o
-
-# target to build an object file
-home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
-
-home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i
-
-# target to preprocess a source file
-home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-
-home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s
-
-# target to generate assembly for a file
-home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-.PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
-
 home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o: home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 .PHONY : home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o
 
@@ -2173,6 +2173,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/main.c.s
 .PHONY : main.c.s
 
+stk500v1.o: stk500v1.c.o
+.PHONY : stk500v1.o
+
+# target to build an object file
+stk500v1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/stk500v1.c.o
+.PHONY : stk500v1.c.o
+
+stk500v1.i: stk500v1.c.i
+.PHONY : stk500v1.i
+
+# target to preprocess a source file
+stk500v1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/stk500v1.c.i
+.PHONY : stk500v1.c.i
+
+stk500v1.s: stk500v1.c.s
+.PHONY : stk500v1.s
+
+# target to generate assembly for a file
+stk500v1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/stk500v1.c.s
+.PHONY : stk500v1.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2200,6 +2224,9 @@ help:
 	@echo "... avrprog.o"
 	@echo "... avrprog.i"
 	@echo "... avrprog.s"
+	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.o"
+	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.i"
+	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.s"
 	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
 	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"
@@ -2409,9 +2436,6 @@ help:
 	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.o"
 	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.s"
-	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.o"
-	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.i"
-	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.s"
 	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.o"
 	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i"
 	@echo "... home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s"
@@ -2430,6 +2454,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... stk500v1.o"
+	@echo "... stk500v1.i"
+	@echo "... stk500v1.s"
 .PHONY : help
 
 

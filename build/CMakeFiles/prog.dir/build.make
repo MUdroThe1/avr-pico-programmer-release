@@ -111,10 +111,24 @@ CMakeFiles/prog.dir/avr_devices.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/avr_devices.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico/avr_devices.c -o CMakeFiles/prog.dir/avr_devices.c.s
 
+CMakeFiles/prog.dir/stk500v1.c.o: CMakeFiles/prog.dir/flags.make
+CMakeFiles/prog.dir/stk500v1.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico/stk500v1.c
+CMakeFiles/prog.dir/stk500v1.c.o: CMakeFiles/prog.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/prog.dir/stk500v1.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/stk500v1.c.o -MF CMakeFiles/prog.dir/stk500v1.c.o.d -o CMakeFiles/prog.dir/stk500v1.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico/stk500v1.c
+
+CMakeFiles/prog.dir/stk500v1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/prog.dir/stk500v1.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico/stk500v1.c > CMakeFiles/prog.dir/stk500v1.c.i
+
+CMakeFiles/prog.dir/stk500v1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/stk500v1.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico/stk500v1.c -o CMakeFiles/prog.dir/stk500v1.c.s
+
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_common/common.c.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/hardware_claim/claim.c.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/com
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync/sync.c.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq.c.i: cmake_force
@@ -239,7 +253,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.i: cmake_force
@@ -253,7 +267,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/sem.c.i: cmake_force
@@ -267,7 +281,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/com
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/lock_core.c.i: cmake_force
@@ -281,7 +295,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/com
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/mutex.c.i: cmake_force
@@ -295,7 +309,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/com
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_sync/critical_section.c.i: cmake_force
@@ -309,7 +323,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/com
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/time.c.i: cmake_force
@@ -323,7 +337,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/com
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_time/timeout_helper.c.i: cmake_force
@@ -337,7 +351,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/com
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_timer/timer.c.i: cmake_force
@@ -351,7 +365,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/datetime.c.i: cmake_force
@@ -365,7 +379,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/com
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/pheap.c.i: cmake_force
@@ -379,7 +393,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/com
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_util/queue.c.i: cmake_force
@@ -393,7 +407,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/com
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_uart/uart.c.i: cmake_force
@@ -407,7 +421,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i: cmake_force
@@ -421,7 +435,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_pll/pll.c.i: cmake_force
@@ -435,7 +449,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i: cmake_force
@@ -449,7 +463,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i: cmake_force
@@ -463,7 +477,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.i: cmake_force
@@ -477,7 +491,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i: cmake_force
@@ -491,7 +505,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.i: cmake_force
@@ -505,7 +519,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.i: cmake_force
@@ -519,7 +533,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_flash/flash.c.i: cmake_force
@@ -533,7 +547,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
@@ -546,7 +560,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_divider/divider.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_divider/divider.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_divider/divider.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_divider/divider.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
@@ -560,7 +574,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
@@ -574,7 +588,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.i: cmake_force
@@ -588,7 +602,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.i: cmake_force
@@ -602,7 +616,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.i: cmake_force
@@ -615,7 +629,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
@@ -628,7 +642,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.i: cmake_force
@@ -641,7 +655,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.i: cmake_force
@@ -655,7 +669,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.i: cmake_force
@@ -669,7 +683,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
@@ -682,7 +696,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.i: cmake_force
@@ -695,7 +709,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i: cmake_force
@@ -708,7 +722,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.i: cmake_force
@@ -722,7 +736,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.i: cmake_force
@@ -736,7 +750,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
@@ -749,7 +763,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.i: cmake_force
@@ -763,7 +777,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_malloc/malloc.c.i: cmake_force
@@ -776,7 +790,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i: cmake_force
@@ -790,7 +804,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_atomic/atomic.c.i: cmake_force
@@ -804,7 +818,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o"
 	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.i: cmake_force
@@ -818,7 +832,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.i: cmake_force
@@ -832,7 +846,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
@@ -845,7 +859,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building ASM object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o   -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/crt0.S
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/crt0.S.i: cmake_force
@@ -859,7 +873,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.i: cmake_force
@@ -873,7 +887,7 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
@@ -883,20 +897,6 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
-
-CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
-CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
-
-CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c > CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
-
-CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: CMakeFiles/prog.dir/flags.make
 CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
@@ -1262,11 +1262,26 @@ CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_spi/spi.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_spi/spi.c -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
+CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o: CMakeFiles/prog.dir/flags.make
+CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c
+CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o: CMakeFiles/prog.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o -MF CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o.d -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o -c /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c
+
+CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c > CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.i
+
+CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c -o CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.s
+
 # Object files for target prog
 prog_OBJECTS = \
 "CMakeFiles/prog.dir/main.c.o" \
 "CMakeFiles/prog.dir/avrprog.c.o" \
 "CMakeFiles/prog.dir/avr_devices.c.o" \
+"CMakeFiles/prog.dir/stk500v1.c.o" \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o" \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.o" \
@@ -1323,7 +1338,6 @@ prog_OBJECTS = \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o" \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o" \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o" \
-"CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o" \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o" \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o" \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o" \
@@ -1349,7 +1363,8 @@ prog_OBJECTS = \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/src/tusb.c.o" \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o" \
 "CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o" \
-"CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_spi/spi.c.o"
+"CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_spi/spi.c.o" \
+"CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o"
 
 # External object files for target prog
 prog_EXTERNAL_OBJECTS =
@@ -1357,6 +1372,7 @@ prog_EXTERNAL_OBJECTS =
 prog.elf: CMakeFiles/prog.dir/main.c.o
 prog.elf: CMakeFiles/prog.dir/avrprog.c.o
 prog.elf: CMakeFiles/prog.dir/avr_devices.c.o
+prog.elf: CMakeFiles/prog.dir/stk500v1.c.o
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2040/pico_platform/platform.c.o
@@ -1413,7 +1429,6 @@ prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-s
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
-prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.o
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
@@ -1440,11 +1455,12 @@ prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-s
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o
 prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+prog.elf: CMakeFiles/prog.dir/home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/lib/tinyusb/hw/bsp/rp2040/family.c.o
 prog.elf: CMakeFiles/prog.dir/build.make
 prog.elf: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
 prog.elf: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_crt0/rp2040/memmap_default.ld
 prog.elf: CMakeFiles/prog.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Linking CXX executable prog.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Linking CXX executable prog.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/prog.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objdump -h /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/prog.elf > prog.dis
 	/usr/bin/arm-none-eabi-objdump -d /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/prog.elf >> prog.dis
