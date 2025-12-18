@@ -1,12 +1,10 @@
 cmake_minimum_required(VERSION 3.13)
 
-
-include(${CMAKE_SOURCE_DIR}/../../pico-sdk/external/pico_sdk_import.cmake)
-
-include(${CMAKE_SOURCE_DIR}/../../pico-extras/external/pico_extras_import.cmake)
-
-
-# Do not import pico-extras to avoid accidental path mixing
+# Default to the repo-local pico-sdk to avoid mixing multiple SDK checkouts.
+if (NOT DEFINED PICO_SDK_PATH)
+    set(PICO_SDK_PATH "${CMAKE_CURRENT_LIST_DIR}/../pico-sdk" CACHE PATH "Path to the Raspberry Pi Pico SDK")
+endif()
+include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
 project(prog C CXX ASM)
 
@@ -35,5 +33,6 @@ target_link_libraries(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 
 pico_add_extra_outputs(${PROJECT_NAME})
-pico_enable_stdio_usb(${PROJECT_NAME} 1)
-pico_enable_stdio_uart(${PROJECT_NAME} 0)
+# We use TinyUSB CDC directly for STK500v1; do not enable stdio-over-USB (it also uses TinyUSB).
+pico_enable_stdio_usb(${PROJECT_NAME} 0)
+pico_enable_stdio_uart(${PROJECT_NAME} 1)

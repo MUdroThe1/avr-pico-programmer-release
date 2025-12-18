@@ -1,4 +1,4 @@
-# Install script for directory: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk
+# Install script for directory: /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico-sdk
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,11 +45,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/src/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico_extras/src/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

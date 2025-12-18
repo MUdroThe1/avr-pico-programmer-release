@@ -112,6 +112,7 @@ static void handle_frame(uint8_t cmd, const uint8_t* payload, size_t payload_len
 
         case Cmnd_STK_LEAVE_PROGMODE: {
             programming = false;
+            avr_leave_programming_mode();
             resp_ok_insync();
         } break;
 

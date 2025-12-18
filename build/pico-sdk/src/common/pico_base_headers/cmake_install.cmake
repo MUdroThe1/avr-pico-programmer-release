@@ -1,4 +1,4 @@
-# Install script for directory: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/common/pico_base_headers
+# Install script for directory: /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico-sdk/src/common/pico_base_headers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

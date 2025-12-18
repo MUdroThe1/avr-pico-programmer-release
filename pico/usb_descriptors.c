@@ -1,4 +1,5 @@
 #include <tusb.h>
+#include "class/cdc/cdc_device.h"
 
 // Device descriptor
 static tusb_desc_device_t const desc_device = {

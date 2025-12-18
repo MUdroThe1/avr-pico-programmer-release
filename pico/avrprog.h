@@ -13,6 +13,9 @@ void avr_reset();
 // "If the 0x53 did not echo back, give RESET a positive pulse and issue a new Programming Enable command"
 bool avr_enter_programming_mode();
 
+// Releases the RESET line (drives it high), ending SPI programming mode.
+void avr_leave_programming_mode();
+
 // Erases the program memory as well as the EEPROM.
 // This operation must be performed before programming of new data.
 // This operation is destructive to the underlying flash storage and can only be done a limited amount of times (usually ~10,000 times).

@@ -39,7 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico_extras/cmake_install.cmake")
   include("/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/cmake_install.cmake")
 
 endif()

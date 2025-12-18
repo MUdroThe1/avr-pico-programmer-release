@@ -27,6 +27,8 @@ void avr_spi_init() {
     // Setup the reset pin.
     gpio_init(reset_pin);
     gpio_set_dir(reset_pin, GPIO_OUT);
+    // Keep target out of reset by default.
+    gpio_put(reset_pin, 1);
 
     // Setup the SPI pin functions.
     gpio_set_function(mosi_pin, GPIO_FUNC_SPI);
@@ -34,24 +36,48 @@ void avr_spi_init() {
     gpio_set_function(miso_pin, GPIO_FUNC_SPI);
 
     // Initialise the SPI interface for controller pins.
-    spi_init(spi0, 200000);
+    // Keep SCK conservative to support parts running at low clock (e.g. default CKDIV8).
+    spi_init(spi0, 50000);
+
+    // AVR ISP uses SPI mode 0: CPOL=0 (idle low), CPHA=0 (sample on rising edge).
+    spi_set_format(spi0, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
 }
 
 void avr_reset() {
-    sleep_ms(50);
-    gpio_put(reset_pin, 1);
-    sleep_ms(50);
+    // Active-low reset pulse.
     gpio_put(reset_pin, 0);
+    sleep_ms(20);
+    gpio_put(reset_pin, 1);
     sleep_ms(20);
 }
 
 bool avr_enter_programming_mode() {
-    // Send the programming enable command.
-    uint8_t cmd[4] = {0xAC, 0x53, 0x00, 0x00};
-    spi_write_read_blocking(spi0, cmd, output_buffer, 4);
+    // Enter serial programming mode: hold RESET low and issue Programming Enable.
+    // Datasheet guidance: keep SCK low and RESET low; send 0xAC 0x53 .. until echoed.
+    gpio_put(reset_pin, 1);
+    sleep_ms(2);
+    gpio_put(reset_pin, 0);
+    //sleep_ms(30);
 
-    // If the controller sent an echo of the second byte.
-    return output_buffer[2] == 0x53;
+    uint8_t cmd[4] = {0xAC, 0x53, 0x00, 0x00};
+    for (int attempt = 0; attempt < 8; attempt++) {
+        spi_write_read_blocking(spi0, cmd, output_buffer, 4);
+        if (output_buffer[2] == 0x53) {
+            return true;
+        }
+        sleep_ms(10);
+    }
+
+    // If we couldn't enter programming mode, release reset.
+    gpio_put(reset_pin, 1);
+    sleep_ms(2);
+    return false;
+}
+
+void avr_leave_programming_mode() {
+    // Release reset so the target can run.
+    gpio_put(reset_pin, 1);
+    sleep_ms(2);
 }
 
 int erase_c = 0;

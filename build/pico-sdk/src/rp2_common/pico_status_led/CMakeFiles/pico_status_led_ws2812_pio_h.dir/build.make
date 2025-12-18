@@ -68,9 +68,9 @@ include pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws281
 
 pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h: pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h
 
-pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio
+pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h: /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ws2812.pio.h"
-	cd /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/src/rp2_common/pico_status_led && ../../../../pioasm-install/pioasm/pioasm -o c-sdk -v 0 /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h
+	cd /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/src/rp2_common/pico_status_led && ../../../../pioasm-install/pioasm/pioasm -o c-sdk -v 0 /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h
 
 pico_status_led_ws2812_pio_h: pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h
 pico_status_led_ws2812_pio_h: pico-sdk/src/rp2_common/pico_status_led/ws2812.pio.h
@@ -86,6 +86,6 @@ pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.
 .PHONY : pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/clean
 
 pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/depend:
-	cd /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/pico_status_led /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/src/rp2_common/pico_status_led /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico-sdk/src/rp2_common/pico_status_led /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/src/rp2_common/pico_status_led /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/build/pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/sebastiaan/Documents/ProtocolDIrectory/pico-sdk/src/rp2_common/hardware_xip_cache
+# Install script for directory: /home/sebastiaan/Documents/ProtocolDIrectory/avr-pico-programmer-release/pico-sdk/src/rp2_common/hardware_xip_cache
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
