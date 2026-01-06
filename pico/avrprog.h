@@ -1,63 +1,174 @@
+/**
+ * @file avrprog.h
+ * @brief AVR ISP Programming Interface - Function Prototypes
+ * 
+ * This header defines the public interface for AVR In-System Programming (ISP)
+ * functions. These functions implement the low-level AVR ISP protocol over SPI.
+ * 
+ * AVR ISP Protocol Overview:
+ *   - All commands are 4-byte SPI transactions
+ *   - SPI Mode 0 (CPOL=0, CPHA=0, MSB first)
+ *   - Target held in reset during programming
+ *   - Page-based flash programming model
+ * 
+ * Typical Programming Sequence:
+ *   1. avr_spi_init() - Initialize SPI interface
+ *   2. avr_enter_programming_mode() - Put target in programming mode
+ *   3. avr_read_signature() - Verify correct target connected
+ *   4. avr_erase_memory() - Erase flash before programming
+ *   5. Loop: avr_write_temporary_buffer*() + avr_flash_program_memory()
+ *   6. Verify with avr_verify_program_memory_page()
+ *   7. avr_leave_programming_mode() - Release target to run
+ * 
+ * @author MUdroThe1
+ * @date 2026
+ */
+
 #pragma once
 
 #include <pico/stdlib.h>
 
-// Initialises the SPI interface bridge to the microcontroller.
+/*******************************************************************************
+ * Initialization and Mode Control Functions
+ ******************************************************************************/
+
+/**
+ * @brief Initialize SPI interface for AVR ISP communication
+ * 
+ * Configures GPIO pins and SPI peripheral for communication with AVR target.
+ * Must be called before any other AVR programming functions.
+ */
 void avr_spi_init();
 
-// Causes the microcontroller to perform a reset sequence by pulsing the RESET pin.
+/**
+ * @brief Pulse RESET line to restart target
+ * 
+ * Generates an active-low reset pulse to restart the AVR target.
+ * Useful for recovery from stuck states.
+ */
 void avr_reset();
 
-// Sends a Programming Enable command to enter memory programming mode.
-// Returns a boolean indicating the microcontrollers acknowledgement through a satisfactory echo.
-// "If the 0x53 did not echo back, give RESET a positive pulse and issue a new Programming Enable command"
+/**
+ * @brief Enter Serial Programming mode
+ * 
+ * Holds RESET low and sends Programming Enable command to put the
+ * target into ISP mode. Retries automatically if synchronization fails.
+ * 
+ * @return true if programming mode entered successfully, false if failed
+ */
 bool avr_enter_programming_mode();
 
-// Releases the RESET line (drives it high), ending SPI programming mode.
+/**
+ * @brief Exit Serial Programming mode
+ * 
+ * Releases RESET line to allow target to exit programming mode and run.
+ */
 void avr_leave_programming_mode();
 
-// Erases the program memory as well as the EEPROM.
-// This operation must be performed before programming of new data.
-// This operation is destructive to the underlying flash storage and can only be done a limited amount of times (usually ~10,000 times).
+/*******************************************************************************
+ * Memory Operations
+ ******************************************************************************/
+
+/**
+ * @brief Perform Chip Erase operation
+ * 
+ * Erases entire flash and EEPROM. Required before programming new data.
+ * 
+ * @warning This operation wears flash - limited to ~10,000 cycles total.
+ * @note A safety limit prevents more than 200 erases per session.
+ */
 void avr_erase_memory();
 
-// Read the 3-byte signature of the connected AVR into the provided buffer.
-// `signature` must point to an array of at least 3 bytes.
+/**
+ * @brief Read 3-byte device signature
+ * 
+ * @param signature Buffer to store 3-byte signature (must be >= 3 bytes)
+ */
 void avr_read_signature(uint8_t *signature);
 
-// Performs a write to the AVR program memory temporary buffer.
-// Addresses are per-word, 0 = first 2 bytes, 1 = 3rd and 4th byte (little endian).
-// Combined 16-bit uint version.
+/*******************************************************************************
+ * Page Buffer Write Functions
+ ******************************************************************************/
+
+/**
+ * @brief Write a 16-bit word to page buffer
+ * 
+ * @param word_address Word offset within page (0 = first word)
+ * @param data 16-bit program word to write
+ */
 void avr_write_temporary_buffer_16(uint16_t word_address, uint16_t data);
 
-// Performs a write to the AVR program memory temporary buffer.
-// Addresses are per-word, 0 = first 2 bytes, 1 = 3rd and 4th byte (little endian).
-// Separate data byte version.
+/**
+ * @brief Write low and high bytes separately to page buffer
+ * 
+ * @param word_address Word offset within page
+ * @param low_byte Lower 8 bits of program word
+ * @param high_byte Upper 8 bits of program word
+ */
 void avr_write_temporary_buffer(uint16_t word_address, uint8_t low_byte, uint8_t high_byte);
 
-// Flashes the data from the temporary buffer to the program memory at the specified address.
-// Addresses are per-word, 0 = first 2 bytes, 1 = 3rd and 4th byte (little endian).
-void avr_flash_program_memory(uint16_t word_address);
-
-// Performs a read on the AVR program memory at the specified address.
-// Addresses are per-word, 0 = first 2 bytes, 1 = 3rd and 4th byte (little endian).
-// Low byte only version.
-uint8_t avr_read_program_memory_low_byte(uint16_t word_address);
-
-// Performs a read on the AVR program memory at the specified address.
-// Addresses are per-word, 0 = first 2 bytes, 1 = 3rd and 4th byte (little endian).
-// High byte only version.
-uint8_t avr_read_program_memory_high_byte(uint16_t word_address);
-
-// Performs a read on the AVR program memory at the specified address.
-// Addresses are per-word, 0 = first 2 bytes, 1 = 3rd and 4th byte (little endian).
-uint16_t avr_read_program_memory(uint16_t word_address);
-
-// Writes a specified amount of words directly from a buffer onto the AVR controllers temporary buffer.
-// The maximum supported words depends on the specific AVR controller/page size used, for the ATTiny84A it is 32 words (64 bytes).
-// https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny24A-44A-84A-DataSheet-DS40002269A.pdf
+/**
+ * @brief Fill page buffer from array
+ * 
+ * @param data Pointer to word array
+ * @param data_len Number of words to write (must not exceed device page size)
+ */
 void avr_write_temporary_buffer_page(uint16_t* data, size_t data_len);
 
-// Verifies and compares the values on the program memory to the expected_data buffer and returns a boolean indicating result (true = matches).
-// This should be done after each page is flashed onto the controller as writes can be often unreliable and fail, so that the operation can be retried.
+/*******************************************************************************
+ * Flash Programming Functions
+ ******************************************************************************/
+
+/**
+ * @brief Commit page buffer to flash memory
+ * 
+ * Writes the entire page buffer contents to flash at the specified page.
+ * 
+ * @param word_address Any word address within the target page
+ */
+void avr_flash_program_memory(uint16_t word_address);
+
+/*******************************************************************************
+ * Memory Read Functions
+ ******************************************************************************/
+
+/**
+ * @brief Read low byte of program word
+ * 
+ * @param word_address Word address to read
+ * @return Lower 8 bits of the program word
+ */
+uint8_t avr_read_program_memory_low_byte(uint16_t word_address);
+
+/**
+ * @brief Read high byte of program word
+ * 
+ * @param word_address Word address to read
+ * @return Upper 8 bits of the program word
+ */
+uint8_t avr_read_program_memory_high_byte(uint16_t word_address);
+
+/**
+ * @brief Read complete 16-bit program word
+ * 
+ * @param word_address Word address to read
+ * @return 16-bit program word
+ */
+uint16_t avr_read_program_memory(uint16_t word_address);
+
+/*******************************************************************************
+ * Verification Functions
+ ******************************************************************************/
+
+/**
+ * @brief Verify programmed page against expected data
+ * 
+ * Reads back a page of flash and compares against expected values.
+ * Essential for detecting programming errors.
+ * 
+ * @param page_address_start Starting word address of page
+ * @param expected_data Expected data array
+ * @param data_len Number of words to verify
+ * @return true if verification passed, false if mismatch found
+ */
 bool avr_verify_program_memory_page(uint16_t page_address_start, uint16_t* expected_data, size_t data_len);

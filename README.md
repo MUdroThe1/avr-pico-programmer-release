@@ -4,7 +4,26 @@ This firmware turns a Raspberry Pi Pico (RP2040) into an AVR ISP programmer that
 
 - Protocol: STK500v1 subset (GET_SYNC, ENTER/LEAVE_PROGMODE, LOAD_ADDRESS, PROG_PAGE, READ_PAGE, CHIP_ERASE, UNIVERSAL)
 - Transport: USB CDC (ttyACM)
-- Backend: Bitbang over RP2040 SPI using `avrprog.*`
+- Backend: Hardware SPI using RP2040's SPI peripheral via `avrprog.*`
+
+## ⚠️ Work In Progress
+
+### Bitbanging Feature
+A **bitbanging mode** is currently **in development**. This feature will allow:
+- Software-based SPI implementation for maximum pin flexibility
+- Support for non-standard pin configurations
+- Fallback mode when hardware SPI is unavailable
+
+*Status: In progress - not yet functional*
+
+### Protocol Trace Parser (`test.py`)
+The `pico/test.py` Python script is a **work-in-progress** tool for parsing and analyzing STK500v1 protocol traces. Planned features include:
+- Full command decoding with human-readable output
+- Response validation and error detection
+- Flash data hex dump and analysis
+- Protocol timing analysis for debugging
+
+*Status: In progress - basic frame parsing implemented*
 
 ## Wiring (default pins)
 
