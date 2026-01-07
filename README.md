@@ -6,7 +6,7 @@ This firmware turns a Raspberry Pi Pico (RP2040) into an AVR ISP programmer that
 - Transport: USB CDC (ttyACM)
 - Backend: Hardware SPI using RP2040's SPI peripheral via `avrprog.*`
 
-## ⚠️ Work In Progress
+##  Work In Progress
 
 ### Bitbanging Feature
 A **bitbanging mode** is currently **in development**. This feature will allow:
@@ -18,10 +18,8 @@ A **bitbanging mode** is currently **in development**. This feature will allow:
 
 ### Protocol Trace Parser (`test.py`)
 The `pico/test.py` Python script is a **work-in-progress** tool for parsing and analyzing STK500v1 protocol traces. Planned features include:
-- Full command decoding with human-readable output
-- Response validation and error detection
-- Flash data hex dump and analysis
-- Protocol timing analysis for debugging
+- Full hex byte decoding into stk500v1 commands  
+- Error detection
 
 *Status: In progress - basic frame parsing implemented*
 
@@ -34,7 +32,7 @@ The current pin mapping is defined in `pico/avrprog.c`:
 - `SCK`  → GPIO 18
 - `RESET`→ GPIO 17 (active low)
 
-Target connections (AVR 6‑pin ISP header):
+Target connections (AVR 6‑pin ISP):
 
 - 1: MISO ↔ GPIO 16 (level-shifted if target is 5V)
 - 2: VCC (target power)
@@ -102,4 +100,4 @@ avrdude -p m328p -c arduino -P /dev/ttyACM0 -b 115200 -U flash:r:/tmp/readback.h
 
 ## Changing pins or SPI speed
 
-Pins and SPI frequency are currently hardcoded in `pico/avrprog.c` (`spi_init(spi0, 200000)`). Adjust as needed, and rebuild.
+Pins and SPI frequency are currently hardcoded in `pico/avrprog.c` (`spi_init(spi0, 50000)`). Adjust as needed, and rebuild.
