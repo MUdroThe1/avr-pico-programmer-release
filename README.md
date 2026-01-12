@@ -116,3 +116,10 @@ avrdude -p m328p -c stk500v1 -P /dev/ttyACM0 -b 115200 -U flash:r:/tmp/readback.
 ## Changing pins or SPI speed
 
 Pins and SPI frequency are currently hardcoded in `pico/avrprog.c` (`spi_init(spi0, 50000)`). Adjust as needed, and rebuild.
+
+## For test.c compilation and hex format use: 
+avr-gcc -DF_CPU=1000000 -mmcu=atmega328p -O2 test.c -o fw.elf 
+
+avr-objcopy -O ihex -R .eeprom fw.elf fw.hex
+
+
