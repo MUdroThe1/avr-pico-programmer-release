@@ -122,4 +122,5 @@ avr-gcc -DF_CPU=1000000 -mmcu=atmega328p -O2 test.c -o fw.elf
 
 avr-objcopy -O ihex -R .eeprom fw.elf fw.hex
 
-
+## For running Doxygen html page
+xdg-open html/index.html
