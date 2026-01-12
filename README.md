@@ -43,6 +43,21 @@ Target connections (AVR 6‑pin ISP):
 
 Note: RP2040 is 3.3V. Use a proper level shifter when the AVR runs at 5V.
 
+## Pico SDK dependency
+
+This repository does **not** vendor the Pico SDK (and Pico Extras).  
+You must provide them locally and point CMake to them.
+
+### Clone to this repo 
+
+From the parent folder:
+
+```
+git clone --depth=1 https://github.com/raspberrypi/pico-sdk.git
+git clone --depth=1 https://github.com/raspberrypi/pico-extras.git
+```
+
+
 ## Build
 
 This project uses Pico SDK + TinyUSB. From the `avr-pico-programmer-release` folder:
