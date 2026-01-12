@@ -1,0 +1,5 @@
+<map id="avr_write_temporary_buffer_16" name="avr_write_temporary_buffer_16">
+<area shape="rect" id="Node000001" title="Write a 16&#45;bit word to the temporary page buffer." alt="" coords="5,5,164,45"/>
+<area shape="rect" id="Node000002" href="$avrprog_8c.html#ad5fea5f4158f65ac28f33dcb868834a8" title="Write a word (low and high bytes) to the temporary page buffer." alt="" coords="212,5,371,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,23,198,23,198,28,164,28"/>
+</map>

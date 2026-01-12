@@ -1,0 +1,9 @@
+<map id="pico/avr_devices.c" name="pico/avr_devices.c">
+<area shape="rect" id="Node000001" title="AVR Device Database and Signature Lookup." alt="" coords="49,5,191,31"/>
+<area shape="rect" id="Node000002" href="$avr__devices_8h.html" title="AVR Device Database Types and Function Prototypes." alt="" coords="5,79,117,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,33,81,70,77,67,108,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="141,79,216,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="132,29,163,67,159,70,128,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="26,152,97,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="64,104,64,138,59,138,59,104"/>
+</map>

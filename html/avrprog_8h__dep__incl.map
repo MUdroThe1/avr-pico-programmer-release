@@ -1,0 +1,9 @@
+<map id="pico/avrprog.h" name="pico/avrprog.h">
+<area shape="rect" id="Node000001" title="AVR ISP Programming Interface &#45; Function Prototypes." alt="" coords="136,5,251,31"/>
+<area shape="rect" id="Node000002" href="$avrprog_8c.html" title="AVR ISP (In&#45;System Programming) implementation for Raspberry Pi Pico." alt="" coords="5,79,120,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,40,85,81,83,76,159,35"/>
+<area shape="rect" id="Node000003" href="$main_8c.html" title="Main entry point for RP2040 AVR ISP Programmer." alt="" coords="145,79,242,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,44,196,79,191,79,191,44"/>
+<area shape="rect" id="Node000004" href="$stk500v1_8c.html" title="STK500v1 Protocol Implementation for AVR ISP Programming." alt="" coords="266,79,390,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,35,307,76,305,81,226,39"/>
+</map>

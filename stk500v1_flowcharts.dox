@@ -1,0 +1,64 @@
+/**
+\page stk500v1_flowcharts STK500v1 Flowcharts
+
+This page contains hand-authored flowcharts for the STK500v1 implementation.
+
+\section stk_feed Parser: stk500v1_feed()
+
+\dot
+digraph stk500v1_feed {
+  rankdir=LR;
+  node [shape=box];
+
+  Start -> AppendBytes -> "Parse loop";
+  "Parse loop" -> "Find EOP (0x20)?";
+  "Find EOP (0x20)?" -> "Need more bytes" [label="no"];
+  "Find EOP (0x20)?" -> "Extract frame" [label="yes"];
+  "Extract frame" -> "handle_frame(cmd,payload)" -> "drop_rx(frame_len)" -> "Parse loop";
+  "Need more bytes" -> End;
+  Start -> End;
+}
+\enddot
+
+\section stk_dispatch Dispatcher: handle_frame()
+
+\dot
+digraph handle_frame {
+  rankdir=TB;
+
+  node [shape=box];
+  Start [label="handle_frame(cmd,payload)"];
+  Start -> Switch;
+
+  Switch [shape=diamond, label="cmd?"];
+
+  Switch -> GET_SYNC [label="GET_SYNC"];
+  Switch -> LOAD_ADDRESS [label="LOAD_ADDRESS"];
+  Switch -> ENTER_PM [label="ENTER_PROGMODE"];
+  Switch -> LEAVE_PM [label="LEAVE_PROGMODE"];
+  Switch -> CHIP_ERASE [label="CHIP_ERASE"];
+  Switch -> PROG_PAGE [label="PROG_PAGE"];
+  Switch -> READ_PAGE [label="READ_PAGE"];
+  Switch -> READ_SIGN [label="READ_SIGN"];
+  Switch -> UNIVERSAL [label="UNIVERSAL"];
+  Switch -> DEFAULT [label="other"];
+
+  GET_SYNC    -> RESP_OK [label="Resp_INSYNC + OK"];
+  LOAD_ADDRESS-> RESP_OK [label="set current_address; OK"];
+  ENTER_PM    -> RESP_OK [label="avr_enter_programming_mode()"];
+  LEAVE_PM    -> RESP_OK [label="avr_leave_programming_mode(); OK"];
+  CHIP_ERASE  -> RESP_OK [label="avr_erase_memory(); OK"];
+
+  PROG_PAGE   -> RESP_OK [label="write page buffer + commit; OK"];
+  READ_PAGE   -> RESP_OK [label="read N bytes; INSYNC + data + OK"];
+  READ_SIGN   -> RESP_OK [label="INSYNC + 3 bytes + OK"];
+  UNIVERSAL   -> RESP_OK [label="4-byte SPI xfer; INSYNC + 1 byte + OK"];
+
+  DEFAULT     -> RESP_FAIL [label="FAILED or NOSYNC"];
+
+  RESP_OK   [shape=oval, label="send response"];
+  RESP_FAIL [shape=oval, label="send error"];
+}
+\enddot
+
+*/
