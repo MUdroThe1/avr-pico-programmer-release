@@ -1,2 +1,17 @@
 # Doxygen LaTeX output (usually large; keep HTML tracked)
 latex/
+# Doxygen LaTeX output (usually large; keep HTML tracked)
+latex/
+
+# Build artifacts
+build/
+
+# Local SDK clones (if you want them local-only)
+pico-sdk/
+pico-extras/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*~

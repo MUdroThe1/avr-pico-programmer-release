@@ -85,23 +85,23 @@ Example device: ATmega328P (`-p m328p`). Baudrate is not used by USB CDC but avr
 
 - Probe signature and basic communication:
 ```zsh
-avrdude -p m328p -c arduino -P /dev/ttyACM0 -b 115200 -v -n
+avrdude -p m328p -c stk500v1 -P /dev/ttyACM0 -b 115200 -v -n
 ```
 
 - Read fuses and lock:
 ```zsh
-avrdude -p m328p -c arduino -P /dev/ttyACM0 -b 115200 \
+avrdude -p m328p -c stk500v1 -P /dev/ttyACM0 -b 115200 \
   -U lfuse:r:-:h -U hfuse:r:-:h -U efuse:r:-:h -U lock:r:-:h
 ```
 
 - Erase + flash a HEX file:
 ```zsh
-avrdude -p m328p -c arduino -P /dev/ttyACM0 -b 115200 -e -U flash:w:/path/to/firmware.hex:i
+avrdude -p m328p -c stk500v1 -P /dev/ttyACM0 -b 115200 -e -U flash:w:/path/to/firmware.hex:i
 ```
 
 - Read back a flash page (example 128 bytes at current address): avrdude handles paging internally; use:
 ```zsh
-avrdude -p m328p -c arduino -P /dev/ttyACM0 -b 115200 -U flash:r:/tmp/readback.hex:i
+avrdude -p m328p -c stk500v1 -P /dev/ttyACM0 -b 115200 -U flash:r:/tmp/readback.hex:i
 ```
 
 ## Notes
