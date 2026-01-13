@@ -116,6 +116,15 @@ Wiring (default pins)</h1>
 </ul>
 <p>Note: RP2040 is 3.3V. Use a proper level shifter when the AVR runs at 5V.</p>
 <h1><a class="anchor" id="autotoc_md5"></a>
+Pico SDK dependency</h1>
+<p>This repository does <b>not</b> vendor the Pico SDK (and Pico Extras). <br  />
+ You must provide them locally and point CMake to them.</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Clone to this repo</h2>
+<p>From the parent folder:</p>
+<div class="fragment"><div class="line">git clone --depth=1 https://github.com/raspberrypi/pico-sdk.git</div>
+<div class="line">git clone --depth=1 https://github.com/raspberrypi/pico-extras.git</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
 Build</h1>
 <p>This project uses Pico SDK + TinyUSB. From the <code>avr-pico-programmer-release</code> folder:</p>
 <div class="fragment"><div class="line">mkdir -p build</div>
@@ -123,25 +132,25 @@ Build</h1>
 <div class="line">cmake -DPICO_SDK_PATH=&quot;../pico-sdk&quot; -DPICO_EXTRAS_PATH=&quot;../pico-extras&quot; ../pico</div>
 <div class="line">make -j</div>
 </div><!-- fragment --><p>Copy the generated UF2 to the Pico (BOOTSEL mode) to flash the firmware.</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Verify USB device</h1>
 <p>After flashing, the device should enumerate as <code>/dev/ttyACM0</code> (or similar):</p>
 <div class="fragment"><div class="line">ls /dev/ttyACM*</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
 Using avrdude</h1>
 <p>Example device: ATmega328P (<code>-p m328p</code>). Baudrate is not used by USB CDC but avrdude requires one for <code>-c arduino</code>; 115200 is fine.</p>
 <ul>
-<li>Probe signature and basic communication: <div class="fragment"><div class="line">avrdude -p m328p -c arduino -P /dev/ttyACM0 -b 115200 -v -n</div>
+<li>Probe signature and basic communication: <div class="fragment"><div class="line">avrdude -p m328p -c stk500v1 -P /dev/ttyACM0 -b 115200 -v -n</div>
 </div><!-- fragment --></li>
-<li>Read fuses and lock: <div class="fragment"><div class="line">avrdude -p m328p -c arduino -P /dev/ttyACM0 -b 115200 \</div>
+<li>Read fuses and lock: <div class="fragment"><div class="line">avrdude -p m328p -c stk500v1 -P /dev/ttyACM0 -b 115200 \</div>
 <div class="line">  -U lfuse:r:-:h -U hfuse:r:-:h -U efuse:r:-:h -U lock:r:-:h</div>
 </div><!-- fragment --></li>
-<li>Erase + flash a HEX file: <div class="fragment"><div class="line">avrdude -p m328p -c arduino -P /dev/ttyACM0 -b 115200 -e -U flash:w:/path/to/firmware.hex:i</div>
+<li>Erase + flash a HEX file: <div class="fragment"><div class="line">avrdude -p m328p -c stk500v1 -P /dev/ttyACM0 -b 115200 -e -U flash:w:/path/to/firmware.hex:i</div>
 </div><!-- fragment --></li>
-<li>Read back a flash page (example 128 bytes at current address): avrdude handles paging internally; use: <div class="fragment"><div class="line">avrdude -p m328p -c arduino -P /dev/ttyACM0 -b 115200 -U flash:r:/tmp/readback.hex:i</div>
+<li>Read back a flash page (example 128 bytes at current address): avrdude handles paging internally; use: <div class="fragment"><div class="line">avrdude -p m328p -c stk500v1 -P /dev/ttyACM0 -b 115200 -U flash:r:/tmp/readback.hex:i</div>
 </div><!-- fragment --></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Notes</h1>
 <ul>
 <li>Page size is auto-detected from the signature using <code><a class="el" href="avr__devices_8c.html" title="AVR Device Database and Signature Lookup.">pico/avr_devices.c</a></code>. If your device is unknown, add its signature, name, and <code>page_size_bytes</code> there.</li>
@@ -153,9 +162,16 @@ Notes</h1>
 </ul>
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Changing pins or SPI speed</h1>
-<p>Pins and SPI frequency are currently hardcoded in <code><a class="el" href="avrprog_8c.html" title="AVR ISP (In-System Programming) implementation for Raspberry Pi Pico.">pico/avrprog.c</a></code> (<code>spi_init(spi0, 50000)</code>). Adjust as needed, and rebuild. </p>
+<p>Pins and SPI frequency are currently hardcoded in <code><a class="el" href="avrprog_8c.html" title="AVR ISP (In-System Programming) implementation for Raspberry Pi Pico.">pico/avrprog.c</a></code> (<code>spi_init(spi0, 50000)</code>). Adjust as needed, and rebuild.</p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+For test.c compilation and hex format use:</h1>
+<p>avr-gcc -DF_CPU=1000000 -mmcu=atmega328p -O2 test.c -o fw.elf</p>
+<p>avr-objcopy -O ihex -R .eeprom fw.elf fw.hex</p>
+<h1><a class="anchor" id="autotoc_md13"></a>
+For running Doxygen html page</h1>
+<p>xdg-open html/index.html </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

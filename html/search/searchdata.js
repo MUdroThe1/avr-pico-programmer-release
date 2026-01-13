@@ -3,10 +3,12 @@ var indexSectionsWithContent =
   0: "abcdefhimnoprstuvw",
   1: "a",
   2: "t",
-  3: "ams",
-  4: "ams",
+  3: "amstu",
+  4: "amst",
   5: "efnops",
-  6: "afiprs"
+  6: "i",
+  7: "ce",
+  8: "afiprs"
 };
 
 var indexSectionNames =
@@ -17,7 +19,9 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "pages"
+  6: "enumvalues",
+  7: "defines",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +32,8 @@ var indexSectionLabels =
   3: "Files",
   4: "Functions",
   5: "Variables",
-  6: "Pages"
+  6: "Enumerator",
+  7: "Macros",
+  8: "Pages"
 };
 
