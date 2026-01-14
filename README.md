@@ -6,7 +6,10 @@ This firmware turns a Raspberry Pi Pico (RP2040) into an AVR ISP programmer that
 - Transport: USB CDC (ttyACM)
 - Backend: Hardware SPI using RP2040's SPI peripheral via `avrprog.*`
 
-##  Work In Progress
+
+##Up-to Date Documentation for the project:
+https://mudrothe1.github.io/avr-pico-programmer-release/
+
 
 ### Bitbanging Feature
 A **bitbanging mode** is currently **in development**. This feature will allow:
@@ -133,5 +136,5 @@ avr-gcc -DF_CPU=1000000 -mmcu=atmega328p -O2 test.c -o fw.elf
 
 avr-objcopy -O ihex -R .eeprom fw.elf fw.hex
 
-## For running Doxygen html page
+## For running Doxygen html page from your terminal:
 xdg-open html/index.html
