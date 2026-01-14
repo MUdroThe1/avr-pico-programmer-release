@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['c_20compilation_20and_20hex_20format_20use_3a_0',['For test.c compilation and hex format use:',['../md_README.html#autotoc_md12',1,'']]],
+  ['cfg_5ftud_5fcdc_1',['CFG_TUD_CDC',['../tusb__config_8h.html#a7df8fc8e36e96c632d18c5e6a283cbad',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fcdc_5frx_5fbufsize_2',['CFG_TUD_CDC_RX_BUFSIZE',['../tusb__config_8h.html#a0be811273fed0a24763e4a22700e2b1d',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fcdc_5ftx_5fbufsize_3',['CFG_TUD_CDC_TX_BUFSIZE',['../tusb__config_8h.html#a1583fbe8a2453ca3a5986bd6633390c4',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fdfu_4',['CFG_TUD_DFU',['../tusb__config_8h.html#a97eb802f7078ece584247e1e149184b5',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fendpoint0_5fsize_5',['CFG_TUD_ENDPOINT0_SIZE',['../tusb__config_8h.html#a9b99a70dc9fc74ecc23108ab18bbebe4',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fhid_6',['CFG_TUD_HID',['../tusb__config_8h.html#a59ed1f17152d738c0f50edf02565cd20',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fmidi_7',['CFG_TUD_MIDI',['../tusb__config_8h.html#aa407aa4b24ddb98c5c8c27d533ec0e9a',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fmsc_8',['CFG_TUD_MSC',['../tusb__config_8h.html#a159e8998f430441201fe575035576de3',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fnet_9',['CFG_TUD_NET',['../tusb__config_8h.html#aa768414252229885796446c15ae3c983',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fusbtmc_10',['CFG_TUD_USBTMC',['../tusb__config_8h.html#a4fb7552b4442553005b8c76d90174702',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fvendor_11',['CFG_TUD_VENDOR',['../tusb__config_8h.html#a5332fe14c3199537455edc6faaa0ef9b',1,'tusb_config.h']]],
+  ['cfg_5ftud_5fvideo_12',['CFG_TUD_VIDEO',['../tusb__config_8h.html#ab771a5022edc054dea4ada7e69275194',1,'tusb_config.h']]],
+  ['cfg_5ftusb_5fmcu_13',['CFG_TUSB_MCU',['../tusb__config_8h.html#ad4e5cd7320e792ae2b886c03ed3b3476',1,'tusb_config.h']]],
+  ['cfg_5ftusb_5fmem_5falign_14',['CFG_TUSB_MEM_ALIGN',['../tusb__config_8h.html#ae46ca7dc14babee346d8af7aa8db403e',1,'tusb_config.h']]],
+  ['cfg_5ftusb_5fmem_5fsection_15',['CFG_TUSB_MEM_SECTION',['../tusb__config_8h.html#a360b21fa11ef498d9c4dc49428ab780f',1,'tusb_config.h']]],
+  ['cfg_5ftusb_5fos_16',['CFG_TUSB_OS',['../tusb__config_8h.html#a3d27955bb9aee39c43cb3756ffb372c1',1,'tusb_config.h']]],
+  ['cfg_5ftusb_5frhport0_5fmode_17',['CFG_TUSB_RHPORT0_MODE',['../tusb__config_8h.html#ad9c321822c55ec521796b34675d6569a',1,'tusb_config.h']]],
+  ['changing_20pins_20or_20spi_20speed_18',['Changing pins or SPI speed',['../md_README.html#autotoc_md11',1,'']]],
+  ['clone_20to_20this_20repo_19',['Clone to this repo',['../md_README.html#autotoc_md6',1,'']]],
+  ['compilation_20and_20hex_20format_20use_3a_20',['For test.c compilation and hex format use:',['../md_README.html#autotoc_md12',1,'']]]
+];

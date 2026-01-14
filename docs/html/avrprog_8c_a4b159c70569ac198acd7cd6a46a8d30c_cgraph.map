@@ -1,0 +1,7 @@
+<map id="avr_read_program_memory" name="avr_read_program_memory">
+<area shape="rect" id="Node000001" title="Read a complete 16&#45;bit program word from memory." alt="" coords="5,45,208,70"/>
+<area shape="rect" id="Node000002" href="$avrprog_8c.html#ab140e6a9e9d9a0b28c1669db8f4ef47e" title="Read the high byte of a program memory word." alt="" coords="256,5,459,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,42,242,37,243,43,207,47"/>
+<area shape="rect" id="Node000003" href="$avrprog_8c.html#a4001d4bd58bb212246ad73ea16c7718a" title="Read the low byte of a program memory word." alt="" coords="256,69,459,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,67,243,72,242,77,206,73"/>
+</map>

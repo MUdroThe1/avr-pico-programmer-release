@@ -1,0 +1,9 @@
+<map id="avr_verify_program_memory_page" name="avr_verify_program_memory_page">
+<area shape="rect" id="Node000001" title="Verify programmed data by reading back and comparing." alt="" coords="5,37,155,77"/>
+<area shape="rect" id="Node000002" href="$avrprog_8c.html#a4b159c70569ac198acd7cd6a46a8d30c" title="Read a complete 16&#45;bit program word from memory." alt="" coords="203,45,405,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,55,189,55,189,60,155,60"/>
+<area shape="rect" id="Node000003" href="$avrprog_8c.html#ab140e6a9e9d9a0b28c1669db8f4ef47e" title="Read the high byte of a program memory word." alt="" coords="453,5,656,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,42,439,37,440,43,404,47"/>
+<area shape="rect" id="Node000004" href="$avrprog_8c.html#a4001d4bd58bb212246ad73ea16c7718a" title="Read the low byte of a program memory word." alt="" coords="453,69,656,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="404,67,440,72,439,77,403,73"/>
+</map>

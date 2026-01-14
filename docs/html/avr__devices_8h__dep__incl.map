@@ -1,0 +1,7 @@
+<map id="pico/avr_devices.h" name="pico/avr_devices.h">
+<area shape="rect" id="Node000001" title="AVR Device Database Types and Function Prototypes." alt="" coords="84,5,227,31"/>
+<area shape="rect" id="Node000002" href="$avr__devices_8c.html" title="AVR Device Database and Signature Lookup." alt="" coords="5,79,148,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,42,91,80,88,76,131,38"/>
+<area shape="rect" id="Node000003" href="$stk500v1_8c.html" title="STK500v1 Protocol Implementation for AVR ISP Programming." alt="" coords="172,79,296,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,38,223,76,219,80,176,42"/>
+</map>

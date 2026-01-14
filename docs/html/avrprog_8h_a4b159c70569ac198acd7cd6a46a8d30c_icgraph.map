@@ -1,0 +1,5 @@
+<map id="avr_read_program_memory" name="avr_read_program_memory">
+<area shape="rect" id="Node000001" title="Read complete 16&#45;bit program word." alt="" coords="203,13,405,38"/>
+<area shape="rect" id="Node000002" href="$avrprog_8c.html#af00148ce9a1b4ce673524d31e20ff7e9" title="Verify programmed data by reading back and comparing." alt="" coords="5,5,155,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,28,155,28,155,23,189,23"/>
+</map>
