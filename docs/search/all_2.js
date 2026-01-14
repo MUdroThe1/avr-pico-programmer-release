@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['c_20compilation_20and_20hex_20format_20use_3a_0',['For test.c compilation and hex format use:',['../md_README.html#autotoc_md12',1,'']]],
+  ['c_20compilation_20and_20hex_20format_20use_3a_0',['For test.c compilation and hex format use:',['../md_README.html#autotoc_md13',1,'']]],
   ['cfg_5ftud_5fcdc_1',['CFG_TUD_CDC',['../tusb__config_8h.html#a7df8fc8e36e96c632d18c5e6a283cbad',1,'tusb_config.h']]],
   ['cfg_5ftud_5fcdc_5frx_5fbufsize_2',['CFG_TUD_CDC_RX_BUFSIZE',['../tusb__config_8h.html#a0be811273fed0a24763e4a22700e2b1d',1,'tusb_config.h']]],
   ['cfg_5ftud_5fcdc_5ftx_5fbufsize_3',['CFG_TUD_CDC_TX_BUFSIZE',['../tusb__config_8h.html#a1583fbe8a2453ca3a5986bd6633390c4',1,'tusb_config.h']]],
@@ -18,7 +18,7 @@ var searchData=
   ['cfg_5ftusb_5fmem_5fsection_15',['CFG_TUSB_MEM_SECTION',['../tusb__config_8h.html#a360b21fa11ef498d9c4dc49428ab780f',1,'tusb_config.h']]],
   ['cfg_5ftusb_5fos_16',['CFG_TUSB_OS',['../tusb__config_8h.html#a3d27955bb9aee39c43cb3756ffb372c1',1,'tusb_config.h']]],
   ['cfg_5ftusb_5frhport0_5fmode_17',['CFG_TUSB_RHPORT0_MODE',['../tusb__config_8h.html#ad9c321822c55ec521796b34675d6569a',1,'tusb_config.h']]],
-  ['changing_20pins_20or_20spi_20speed_18',['Changing pins or SPI speed',['../md_README.html#autotoc_md11',1,'']]],
+  ['changing_20pins_20or_20spi_20speed_18',['Changing pins or SPI speed',['../md_README.html#autotoc_md12',1,'']]],
   ['clone_20to_20this_20repo_19',['Clone to this repo',['../md_README.html#autotoc_md6',1,'']]],
-  ['compilation_20and_20hex_20format_20use_3a_20',['For test.c compilation and hex format use:',['../md_README.html#autotoc_md12',1,'']]]
+  ['compilation_20and_20hex_20format_20use_3a_20',['For test.c compilation and hex format use:',['../md_README.html#autotoc_md13',1,'']]]
 ];

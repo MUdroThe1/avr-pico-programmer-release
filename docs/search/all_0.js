@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['and_20hex_20format_20use_3a_0',['For test.c compilation and hex format use:',['../md_README.html#autotoc_md12',1,'']]],
+  ['and_20hex_20format_20use_3a_0',['For test.c compilation and hex format use:',['../md_README.html#autotoc_md13',1,'']]],
   ['avr_20isp_20stk500v1_20programmer_1',['RP2040 AVR ISP (STK500v1) Programmer',['../md_README.html',1,'']]],
   ['avr_5fdevice_5ft_2',['avr_device_t',['../structavr__device__t.html',1,'']]],
   ['avr_5fdevices_2ec_3',['avr_devices.c',['../avr__devices_8c.html',1,'']]],
@@ -20,7 +20,7 @@ var searchData=
   ['avr_5fwrite_5ftemporary_5fbuffer_17',['avr_write_temporary_buffer',['../avrprog_8c.html#ad5fea5f4158f65ac28f33dcb868834a8',1,'avr_write_temporary_buffer(uint16_t word_address, uint8_t low_byte, uint8_t high_byte):&#160;avrprog.c'],['../avrprog_8h.html#ad5fea5f4158f65ac28f33dcb868834a8',1,'avr_write_temporary_buffer(uint16_t word_address, uint8_t low_byte, uint8_t high_byte):&#160;avrprog.c']]],
   ['avr_5fwrite_5ftemporary_5fbuffer_5f16_18',['avr_write_temporary_buffer_16',['../avrprog_8c.html#a3f08500e8dc958684c90401d71ee4e79',1,'avr_write_temporary_buffer_16(uint16_t word_address, uint16_t word):&#160;avrprog.c'],['../avrprog_8h.html#ac567d37bbbfeb1f3b539cd5f5a29b5cf',1,'avr_write_temporary_buffer_16(uint16_t word_address, uint16_t data):&#160;avrprog.c']]],
   ['avr_5fwrite_5ftemporary_5fbuffer_5fpage_19',['avr_write_temporary_buffer_page',['../avrprog_8c.html#a166877529469b5caa7d9ebf84c04cacf',1,'avr_write_temporary_buffer_page(uint16_t *data, size_t data_len):&#160;avrprog.c'],['../avrprog_8h.html#a166877529469b5caa7d9ebf84c04cacf',1,'avr_write_temporary_buffer_page(uint16_t *data, size_t data_len):&#160;avrprog.c']]],
-  ['avrdude_20',['Using avrdude',['../md_README.html#autotoc_md9',1,'']]],
+  ['avrdude_20',['Using avrdude',['../md_README.html#autotoc_md10',1,'']]],
   ['avrprog_2ec_21',['avrprog.c',['../avrprog_8c.html',1,'']]],
   ['avrprog_2eh_22',['avrprog.h',['../avrprog_8h.html',1,'']]]
 ];

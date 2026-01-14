@@ -2,8 +2,8 @@ var searchData=
 [
   ['sdk_20dependency_0',['Pico SDK dependency',['../md_README.html#autotoc_md5',1,'']]],
   ['signature_1',['signature',['../structavr__device__t.html#a7f1a201d7de597283cd4c72e398c1050',1,'avr_device_t']]],
-  ['speed_2',['Changing pins or SPI speed',['../md_README.html#autotoc_md11',1,'']]],
-  ['spi_20speed_3',['Changing pins or SPI speed',['../md_README.html#autotoc_md11',1,'']]],
+  ['speed_2',['Changing pins or SPI speed',['../md_README.html#autotoc_md12',1,'']]],
+  ['spi_20speed_3',['Changing pins or SPI speed',['../md_README.html#autotoc_md12',1,'']]],
   ['stk500v1_20flowcharts_4',['STK500v1 Flowcharts',['../stk500v1_flowcharts.html',1,'']]],
   ['stk500v1_20programmer_5',['RP2040 AVR ISP (STK500v1) Programmer',['../md_README.html',1,'']]],
   ['stk500v1_2ec_6',['stk500v1.c',['../stk500v1_8c.html',1,'']]],
