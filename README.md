@@ -58,6 +58,17 @@ git clone --depth=1 https://github.com/raspberrypi/pico-extras.git
 ```
 
 
+## Build Update
+
+In the present build you can get the new version of the .uf2 file for pico. 
+However, if you want to compile your own .uf2 file, you have to use
+
+```zsh
+cd build rm rf*
+``` 
+
+And only after that run cmake/make mention below. 
+
 ## Build
 
 This project uses Pico SDK + TinyUSB. From the `avr-pico-programmer-release` folder:
