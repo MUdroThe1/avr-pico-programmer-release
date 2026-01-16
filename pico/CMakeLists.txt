@@ -12,15 +12,41 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_BUILD_TYPE Release)
 
+#===============================================================================
+# SPI Implementation Selection
+#===============================================================================
+# Set USE_BITBANG_SPI to ON to use software bit-banged SPI instead of hardware SPI.
+# Bit-banging allows using any GPIO pins but is slower than hardware SPI.
+# 
+# Usage:
+#   cmake -DUSE_BITBANG_SPI=ON ..   (for bit-bang mode)
+#   cmake -DUSE_BITBANG_SPI=OFF ..  (for hardware SPI mode, default)
+#===============================================================================
+option(USE_BITBANG_SPI "Use software bit-banged SPI instead of hardware SPI" OFF)
+
 pico_sdk_init()
+
+# Select source files based on SPI implementation
+if(USE_BITBANG_SPI)
+    message(STATUS "Using BIT-BANG SPI implementation")
+    set(SPI_SOURCES avrprog_bitbang.c)
+else()
+    message(STATUS "Using HARDWARE SPI implementation")
+    set(SPI_SOURCES avrprog.c)
+endif()
 
 add_executable(${PROJECT_NAME}
     main.c
-    avrprog.c
+    ${SPI_SOURCES}
     avr_devices.c
     stk500v1.c
     usb_descriptors.c
 )
+
+# Add bit-bang define when using bit-bang mode
+if(USE_BITBANG_SPI)
+    target_compile_definitions(${PROJECT_NAME} PRIVATE USE_BITBANG_SPI=1)
+endif()
 
 target_link_libraries(${PROJECT_NAME}
     pico_stdlib

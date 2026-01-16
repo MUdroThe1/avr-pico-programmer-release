@@ -5,6 +5,12 @@
  * This header defines the public interface for AVR In-System Programming (ISP)
  * functions. These functions implement the low-level AVR ISP protocol over SPI.
  * 
+ * SPI Implementation Options:
+ *   - Hardware SPI (default): Uses RP2040's SPI0 peripheral for fast transfers
+ *   - Bit-bang SPI: Software implementation using GPIO, allows any pins
+ * 
+ * To use bit-bang mode, build with: cmake -DUSE_BITBANG_SPI=ON ..
+ * 
  * AVR ISP Protocol Overview:
  *   - All commands are 4-byte SPI transactions
  *   - SPI Mode 0 (CPOL=0, CPHA=0, MSB first)
@@ -27,6 +33,11 @@
 #pragma once
 
 #include <pico/stdlib.h>
+
+/* Include bit-bang header for access to speed control functions */
+#ifdef USE_BITBANG_SPI
+#include "avrprog_bitbang.h"
+#endif
 
 /*******************************************************************************
  * Initialization and Mode Control Functions
