@@ -36,6 +36,9 @@
 #include "tusb.h"
 #include "stk500v1.h"
 #include "avrprog.h"
+#ifdef USE_BITBANG_SPI
+#include "avrprog_bitbang.h"
+#endif
 #include "avr_devices.h"
 #include <hardware/spi.h>
 
@@ -264,7 +267,11 @@ static void handle_frame(uint8_t cmd, const uint8_t* payload, size_t payload_len
                 break;
             }
             uint8_t rx[4] = {0};
+#ifdef USE_BITBANG_SPI
+            avr_bitbang_transfer(payload, rx, 4);
+#else
             spi_write_read_blocking(spi0, payload, rx, 4);
+#endif
             put(Resp_STK_INSYNC);
             put(rx[3]);  /* Return 4th byte of SPI response */
             put(Resp_STK_OK);

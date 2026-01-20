@@ -803,7 +803,8 @@ SHOW_NAMESPACES        = YES
 
 FILE_VERSION_FILTER    =
 
-# The LAYOUT_FILE tag can be used to specify a layout file which will be parsed
+# The 
+FILE tag can be used to specify a layout file which will be parsed
 # by doxygen. The layout file controls the global structure of the generated
 # output files in an output format independent way. To create the layout file
 # that represents doxygen's defaults, run doxygen with the -l option. You can

@@ -22,7 +22,7 @@ set(CMAKE_BUILD_TYPE Release)
 #   cmake -DUSE_BITBANG_SPI=ON ..   (for bit-bang mode)
 #   cmake -DUSE_BITBANG_SPI=OFF ..  (for hardware SPI mode, default)
 #===============================================================================
-option(USE_BITBANG_SPI "Use software bit-banged SPI instead of hardware SPI" OFF)
+option(USE_BITBANG_SPI "Use software bit-banged SPI instead of hardware SPI" ON)
 
 pico_sdk_init()
 

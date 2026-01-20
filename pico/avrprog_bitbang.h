@@ -151,4 +151,5 @@ void avr_bitbang_set_speed(uint32_t delay_us);
  */
 uint32_t avr_bitbang_get_speed(void);
 
-#endif /* AVRPROG_BITBANG_H */
+//#endif /* AVRPROG_BITBANG_H */
+
