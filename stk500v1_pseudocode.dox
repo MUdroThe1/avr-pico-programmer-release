@@ -1,0 +1,440 @@
+/**
+@page stk500v1_pseudocode Pseudocode for stk500v1.c
+
+This page provides pseudocode for all functions in the stk500v1.c module,
+which implements the STK500 version 1 protocol for AVR ISP programming.
+
+@section stk500v1_overview Overview
+
+The STK500v1 protocol is used by Arduino bootloaders and avrdude's "-c arduino"
+programmer type. Commands are variable-length and terminated by Sync_CRC_EOP (0x20).
+
+@section stk500v1_constants Protocol Constants
+
+@code{.unparsed}
+// Response codes
+Resp_STK_INSYNC  = 0x14  // In sync response (start of reply)
+Resp_STK_OK      = 0x10  // Command completed successfully
+Resp_STK_FAILED  = 0x11  // Command failed
+Resp_STK_NOSYNC  = 0x15  // Not in sync (frame error)
+Sync_CRC_EOP     = 0x20  // End of packet marker
+
+// Command codes
+Cmnd_STK_GET_SYNC       = 0x30  // Synchronization ping
+Cmnd_STK_GET_SIGN_ON    = 0x31  // Get programmer ID
+Cmnd_STK_SET_PARAMETER  = 0x40  // Set parameter
+Cmnd_STK_GET_PARAMETER  = 0x41  // Get parameter
+Cmnd_STK_SET_DEVICE     = 0x42  // Set device parameters
+Cmnd_STK_SET_DEVICE_EXT = 0x45  // Extended device params
+Cmnd_STK_ENTER_PROGMODE = 0x50  // Enter programming mode
+Cmnd_STK_LEAVE_PROGMODE = 0x51  // Leave programming mode
+Cmnd_STK_CHIP_ERASE     = 0x52  // Chip erase
+Cmnd_STK_CHECK_AUTOINC  = 0x53  // Check auto-increment
+Cmnd_STK_LOAD_ADDRESS   = 0x55  // Load address
+Cmnd_STK_UNIVERSAL      = 0x56  // Raw SPI transaction
+Cmnd_STK_PROG_PAGE      = 0x64  // Program flash page
+Cmnd_STK_READ_PAGE      = 0x74  // Read flash page
+Cmnd_STK_READ_SIGN      = 0x75  // Read device signature
+@endcode
+
+@section stk500v1_pseudocode_functions Function Pseudocode
+
+@subsection stk500v1_init_pseudo stk500v1_init()
+
+@code{.unparsed}
+FUNCTION stk500v1_init()
+    // Initialize STK500v1 protocol handler state
+    
+    current_address = 0
+    programming = false
+    page_size_bytes = 128      // Default for ATmega328P
+    words_per_page = 64
+    rx_buffer_length = 0
+END FUNCTION
+@endcode
+
+@subsection stk500v1_feed_pseudo stk500v1_feed(data, len)
+
+@code{.unparsed}
+FUNCTION stk500v1_feed(data: byte_array, len: integer)
+    // Feed received bytes into protocol parser
+    
+    IF data IS NULL OR len <= 0:
+        RETURN
+    END IF
+    
+    // Append incoming data to RX buffer (truncate if overflow)
+    bytes_to_copy = MIN(len, RX_BUFFER_SIZE - rx_buffer_length)
+    IF bytes_to_copy > 0:
+        COPY data TO rx_buffer[rx_buffer_length]
+        rx_buffer_length = rx_buffer_length + bytes_to_copy
+    END IF
+    
+    // Parse and process complete frames
+    WHILE rx_buffer_length > 0:
+        
+        // Skip stray EOP bytes from previous desync
+        IF rx_buffer[0] == Sync_CRC_EOP:
+            CALL drop_rx(1)
+            CONTINUE
+        END IF
+        
+        cmd = rx_buffer[0]
+        needed = CALL determine_frame_length(cmd)
+        
+        // Unknown command - drop byte and retry
+        IF needed == 0:
+            CALL drop_rx(1)
+            CONTINUE
+        END IF
+        
+        // Need more bytes - wait for more data
+        IF rx_buffer_length < needed:
+            RETURN
+        END IF
+        
+        // Verify EOP terminator
+        IF rx_buffer[needed - 1] != Sync_CRC_EOP:
+            // Frame error - try to resync
+            eop_index = FIND(Sync_CRC_EOP IN rx_buffer)
+            IF eop_index FOUND:
+                CALL drop_rx(eop_index + 1)
+            ELSE:
+                CALL drop_rx(1)
+            END IF
+            CALL resp_nosync()
+            CONTINUE
+        END IF
+        
+        // Frame complete - dispatch to handler
+        payload = rx_buffer[1 .. needed-2]
+        payload_len = needed - 2
+        CALL handle_frame(cmd, payload, payload_len)
+        CALL drop_rx(needed)
+        
+    END WHILE
+END FUNCTION
+@endcode
+
+@subsection determine_frame_length_pseudo determine_frame_length(cmd)
+
+@code{.unparsed}
+FUNCTION determine_frame_length(cmd) -> integer
+    // Determine expected frame length based on command type
+    
+    SWITCH cmd:
+        CASE GET_SYNC, GET_SIGN_ON, ENTER_PROGMODE, LEAVE_PROGMODE,
+             CHIP_ERASE, CHECK_AUTOINC, READ_SIGN:
+            RETURN 2  // cmd + EOP
+            
+        CASE GET_PARAMETER:
+            RETURN 3  // cmd + param + EOP
+            
+        CASE SET_PARAMETER, LOAD_ADDRESS:
+            RETURN 4  // cmd + 2 bytes + EOP
+            
+        CASE SET_DEVICE:
+            RETURN 22  // cmd + 20 device bytes + EOP
+            
+        CASE SET_DEVICE_EXT:
+            RETURN 7  // cmd + 5 bytes + EOP
+            
+        CASE UNIVERSAL:
+            RETURN 6  // cmd + 4 SPI bytes + EOP
+            
+        CASE READ_PAGE:
+            RETURN 5  // cmd + size_hi + size_lo + memtype + EOP
+            
+        CASE PROG_PAGE:
+            // Variable length - need header to determine
+            IF rx_buffer_length < 4:
+                RETURN -1  // Need more bytes
+            END IF
+            size = (rx_buffer[1] << 8) OR rx_buffer[2]
+            IF size < 0 OR size > 256:
+                RETURN 0  // Invalid - resync
+            END IF
+            RETURN 1 + 3 + size + 1  // cmd + header + data + EOP
+            
+        DEFAULT:
+            RETURN 0  // Unknown command
+    END SWITCH
+END FUNCTION
+@endcode
+
+@subsection handle_frame_pseudo handle_frame(cmd, payload, payload_len)
+
+@code{.unparsed}
+FUNCTION handle_frame(cmd, payload, payload_len)
+    // Process a complete STK500v1 command frame
+    
+    SWITCH cmd:
+    
+        //----------------------------------------------------------
+        // GET_SYNC: Synchronization ping
+        //----------------------------------------------------------
+        CASE Cmnd_STK_GET_SYNC:
+            CALL resp_ok_insync()
+        
+        //----------------------------------------------------------
+        // GET_SIGN_ON: Return programmer identification
+        //----------------------------------------------------------
+        CASE Cmnd_STK_GET_SIGN_ON:
+            SEND Resp_STK_INSYNC
+            SEND "AVR ISP"
+            SEND Resp_STK_OK
+            FLUSH()
+        
+        //----------------------------------------------------------
+        // GET_PARAMETER: Read programmer parameter
+        //----------------------------------------------------------
+        CASE Cmnd_STK_GET_PARAMETER:
+            IF payload_len != 1:
+                CALL resp_failed()
+            ELSE:
+                param = payload[0]
+                value = CALL get_parameter_value(param)
+                SEND Resp_STK_INSYNC
+                SEND value
+                SEND Resp_STK_OK
+                FLUSH()
+            END IF
+        
+        //----------------------------------------------------------
+        // SET_PARAMETER: Write programmer parameter (ignored)
+        //----------------------------------------------------------
+        CASE Cmnd_STK_SET_PARAMETER:
+            IF payload_len != 2:
+                CALL resp_failed()
+            ELSE:
+                CALL resp_ok_insync()
+            END IF
+        
+        //----------------------------------------------------------
+        // SET_DEVICE: Set target device parameters (ignored)
+        //----------------------------------------------------------
+        CASE Cmnd_STK_SET_DEVICE:
+            CALL resp_ok_insync()
+        
+        //----------------------------------------------------------
+        // SET_DEVICE_EXT: Extended device params (ignored)
+        //----------------------------------------------------------
+        CASE Cmnd_STK_SET_DEVICE_EXT:
+            CALL resp_ok_insync()
+        
+        //----------------------------------------------------------
+        // ENTER_PROGMODE: Enter programming mode
+        //----------------------------------------------------------
+        CASE Cmnd_STK_ENTER_PROGMODE:
+            IF CALL avr_enter_programming_mode():
+                programming = true
+                CALL cache_device_params()  // Auto-detect page size
+                CALL resp_ok_insync()
+            ELSE:
+                CALL resp_failed()
+            END IF
+        
+        //----------------------------------------------------------
+        // LEAVE_PROGMODE: Exit programming mode
+        //----------------------------------------------------------
+        CASE Cmnd_STK_LEAVE_PROGMODE:
+            programming = false
+            CALL avr_leave_programming_mode()
+            CALL resp_ok_insync()
+        
+        //----------------------------------------------------------
+        // CHIP_ERASE: Erase target flash
+        //----------------------------------------------------------
+        CASE Cmnd_STK_CHIP_ERASE:
+            CALL avr_erase_memory()
+            CALL resp_ok_insync()
+        
+        //----------------------------------------------------------
+        // CHECK_AUTOINC: Check auto-increment support
+        //----------------------------------------------------------
+        CASE Cmnd_STK_CHECK_AUTOINC:
+            SEND Resp_STK_INSYNC
+            SEND 1  // Yes, auto-increment supported
+            SEND Resp_STK_OK
+            FLUSH()
+        
+        //----------------------------------------------------------
+        // LOAD_ADDRESS: Set current read/write address
+        //----------------------------------------------------------
+        CASE Cmnd_STK_LOAD_ADDRESS:
+            IF payload_len != 2:
+                CALL resp_failed()
+            ELSE:
+                // Little-endian word address
+                current_address = (payload[1] << 8) OR payload[0]
+                CALL resp_ok_insync()
+            END IF
+        
+        //----------------------------------------------------------
+        // READ_SIGN: Read device signature
+        //----------------------------------------------------------
+        CASE Cmnd_STK_READ_SIGN:
+            signature[3] = CALL avr_read_signature()
+            SEND Resp_STK_INSYNC
+            SEND signature[0], signature[1], signature[2]
+            SEND Resp_STK_OK
+            FLUSH()
+        
+        //----------------------------------------------------------
+        // UNIVERSAL: Raw 4-byte SPI transaction
+        //----------------------------------------------------------
+        CASE Cmnd_STK_UNIVERSAL:
+            IF payload_len != 4:
+                CALL resp_failed()
+            ELSE:
+                response = SPI_TRANSFER(payload, 4 bytes)
+                SEND Resp_STK_INSYNC
+                SEND response[3]  // Return 4th byte
+                SEND Resp_STK_OK
+                FLUSH()
+            END IF
+        
+        //----------------------------------------------------------
+        // PROG_PAGE: Program a flash page
+        //----------------------------------------------------------
+        CASE Cmnd_STK_PROG_PAGE:
+            IF payload_len < 3:
+                CALL resp_failed()
+            ELSE:
+                size = (payload[0] << 8) OR payload[1]
+                memtype = payload[2]
+                data = payload[3..]
+                data_len = payload_len - 3
+                
+                // Validate: flash only, correct size
+                IF memtype NOT IN ['F', 'f'] OR size != data_len:
+                    CALL resp_failed()
+                ELSE IF size > page_size_bytes OR size > 256:
+                    CALL resp_failed()
+                ELSE:
+                    // Load data into page buffer
+                    words = size / 2
+                    FOR j FROM 0 TO words - 1:
+                        low = data[j * 2]
+                        high = data[j * 2 + 1]
+                        word = (high << 8) OR low
+                        CALL avr_write_temporary_buffer_16(j, word)
+                    END FOR
+                    
+                    // Commit page to flash
+                    CALL avr_flash_program_memory(current_address)
+                    current_address = current_address + words
+                    CALL resp_ok_insync()
+                END IF
+            END IF
+        
+        //----------------------------------------------------------
+        // READ_PAGE: Read a flash page
+        //----------------------------------------------------------
+        CASE Cmnd_STK_READ_PAGE:
+            IF payload_len != 3:
+                CALL resp_failed()
+            ELSE:
+                size = (payload[0] << 8) OR payload[1]
+                memtype = payload[2]
+                
+                IF memtype NOT IN ['F', 'f'] OR size <= 0 OR size > 256:
+                    CALL resp_failed()
+                ELSE:
+                    SEND Resp_STK_INSYNC
+                    FOR offset FROM 0 TO size - 1:
+                        word_addr = current_address + (offset / 2)
+                        word = CALL avr_read_program_memory(word_addr)
+                        IF offset IS ODD:
+                            byte = word >> 8  // High byte
+                        ELSE:
+                            byte = word AND 0xFF  // Low byte
+                        END IF
+                        SEND byte
+                    END FOR
+                    SEND Resp_STK_OK
+                    FLUSH()
+                    current_address = current_address + ((size + 1) / 2)
+                END IF
+            END IF
+        
+        //----------------------------------------------------------
+        // DEFAULT: Unknown command
+        //----------------------------------------------------------
+        DEFAULT:
+            CALL resp_failed()
+            
+    END SWITCH
+END FUNCTION
+@endcode
+
+@subsection cache_device_params_pseudo cache_device_params()
+
+@code{.unparsed}
+FUNCTION cache_device_params()
+    // Auto-detect device and cache page size
+    
+    signature[3] = CALL avr_read_signature()
+    device = CALL avr_lookup_device_by_signature(signature)
+    
+    IF device IS VALID AND device.page_size_bytes > 0:
+        page_size_bytes = device.page_size_bytes
+        words_per_page = page_size_bytes / 2
+    END IF
+END FUNCTION
+@endcode
+
+@subsection get_parameter_value_pseudo get_parameter_value(param)
+
+@code{.unparsed}
+FUNCTION get_parameter_value(param) -> byte
+    // Return programmer parameter value
+    
+    SWITCH param:
+        CASE 0x80:  // HWVER
+            RETURN 0x02
+        CASE 0x81:  // SW_MAJOR
+            RETURN 0x01
+        CASE 0x82:  // SW_MINOR
+            RETURN 0x12
+        DEFAULT:
+            RETURN 0x00
+    END SWITCH
+END FUNCTION
+@endcode
+
+@subsection helper_functions_pseudo Helper Functions
+
+@code{.unparsed}
+FUNCTION resp_ok_insync()
+    // Send success response
+    SEND Resp_STK_INSYNC
+    SEND Resp_STK_OK
+    FLUSH()
+END FUNCTION
+
+FUNCTION resp_failed()
+    // Send failure response
+    SEND Resp_STK_INSYNC
+    SEND Resp_STK_FAILED
+    FLUSH()
+END FUNCTION
+
+FUNCTION resp_nosync()
+    // Send out-of-sync error
+    SEND Resp_STK_NOSYNC
+    FLUSH()
+END FUNCTION
+
+FUNCTION drop_rx(n)
+    // Remove first n bytes from RX buffer
+    IF n >= rx_buffer_length:
+        rx_buffer_length = 0
+    ELSE:
+        MOVE rx_buffer[n..] TO rx_buffer[0..]
+        rx_buffer_length = rx_buffer_length - n
+    END IF
+END FUNCTION
+@endcode
+
+*/

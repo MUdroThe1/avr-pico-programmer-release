@@ -1,0 +1,267 @@
+/**
+@page avrprog_pseudocode Pseudocode for avrprog.c
+
+This page provides pseudocode for all functions in the avrprog.c module,
+which implements the low-level AVR ISP (In-System Programming) protocol.
+
+@section avrprog_overview Overview
+
+The avrprog module communicates with AVR microcontrollers using the Serial
+Programming Interface (SPI). All AVR ISP commands are 4-byte SPI transactions.
+
+@section avrprog_pseudocode_functions Function Pseudocode
+
+@subsection avr_read_signature_pseudo avr_read_signature(signature)
+
+@code{.unparsed}
+FUNCTION avr_read_signature(signature: byte_array[3])
+    // Read 3-byte device signature to identify AVR chip
+    
+    FOR i FROM 0 TO 2:
+        // ISP Command: 0x30 0x00 <addr> 0x00
+        cmd = [0x30, 0x00, i, 0x00]
+        
+        response = SPI_TRANSFER(cmd, 4 bytes)
+        
+        // Signature byte is in the 4th response byte
+        signature[i] = response[3]
+    END FOR
+END FUNCTION
+@endcode
+
+@subsection avr_spi_init_pseudo avr_spi_init()
+
+@code{.unparsed}
+FUNCTION avr_spi_init()
+    // Initialize SPI interface for AVR ISP communication
+    
+    // Configure RESET pin as output, initially HIGH (target not in reset)
+    GPIO_INIT(reset_pin, OUTPUT)
+    GPIO_WRITE(reset_pin, HIGH)
+    
+    // Configure SPI pins for hardware SPI0
+    GPIO_SET_FUNCTION(mosi_pin, SPI)
+    GPIO_SET_FUNCTION(sck_pin, SPI)
+    GPIO_SET_FUNCTION(miso_pin, SPI)
+    
+    // Initialize SPI at 50kHz (slow for AVRs with CKDIV8 fuse)
+    SPI_INIT(spi0, 50000 Hz)
+    
+    // Configure SPI Mode 0: CPOL=0, CPHA=0, MSB first
+    SPI_SET_FORMAT(spi0, 8 bits, Mode 0, MSB_FIRST)
+END FUNCTION
+@endcode
+
+@subsection avr_reset_pseudo avr_reset()
+
+@code{.unparsed}
+FUNCTION avr_reset()
+    // Generate hardware reset pulse on AVR target
+    
+    GPIO_WRITE(reset_pin, LOW)   // Assert reset (active low)
+    DELAY(20 ms)                  // Hold reset for 20ms
+    GPIO_WRITE(reset_pin, HIGH)  // Release reset
+    DELAY(20 ms)                  // Wait for target stabilization
+END FUNCTION
+@endcode
+
+@subsection avr_enter_programming_mode_pseudo avr_enter_programming_mode()
+
+@code{.unparsed}
+FUNCTION avr_enter_programming_mode() -> boolean
+    // Enter AVR Serial Programming mode
+    
+    // Reset sequence: HIGH -> LOW
+    GPIO_WRITE(reset_pin, HIGH)
+    DELAY(2 ms)
+    GPIO_WRITE(reset_pin, LOW)   // Hold target in reset
+    
+    // Programming Enable command: 0xAC 0x53 0x00 0x00
+    cmd = [0xAC, 0x53, 0x00, 0x00]
+    
+    // Retry up to 8 times (target may need synchronization time)
+    FOR attempt FROM 0 TO 7:
+        response = SPI_TRANSFER(cmd, 4 bytes)
+        
+        // Success: target echoes 0x53 in 3rd response byte
+        IF response[2] == 0x53:
+            RETURN true
+        END IF
+        
+        DELAY(10 ms)
+    END FOR
+    
+    // Failed - release reset and return failure
+    GPIO_WRITE(reset_pin, HIGH)
+    DELAY(2 ms)
+    RETURN false
+END FUNCTION
+@endcode
+
+@subsection avr_leave_programming_mode_pseudo avr_leave_programming_mode()
+
+@code{.unparsed}
+FUNCTION avr_leave_programming_mode()
+    // Exit programming mode - allow target to run
+    
+    GPIO_WRITE(reset_pin, HIGH)  // Release reset
+    DELAY(2 ms)                   // Brief stabilization delay
+END FUNCTION
+@endcode
+
+@subsection avr_erase_memory_pseudo avr_erase_memory()
+
+@code{.unparsed}
+FUNCTION avr_erase_memory()
+    // Perform chip erase (erases all flash and EEPROM)
+    
+    // Safety check: prevent infinite erase loops
+    IF erase_count > 200:
+        PRINT("Erase limit exceeded - halting to protect flash")
+        HALT()
+    END IF
+    
+    // Chip Erase command: 0xAC 0x80 0x00 0x00
+    cmd = [0xAC, 0x80, 0x00, 0x00]
+    SPI_TRANSFER(cmd, 4 bytes)
+    
+    // Wait for erase to complete (minimum 9ms per datasheet)
+    DELAY(9 ms)
+    
+    erase_count = erase_count + 1
+END FUNCTION
+@endcode
+
+@subsection avr_write_temporary_buffer_pseudo avr_write_temporary_buffer(word_address, low_byte, high_byte)
+
+@code{.unparsed}
+FUNCTION avr_write_temporary_buffer(word_address, low_byte, high_byte)
+    // Write one word (2 bytes) to temporary page buffer
+    
+    addr_msb = word_address >> 8
+    addr_lsb = word_address AND 0xFF
+    
+    // Load low byte: 0x40 <addr_hi> <addr_lo> <data>
+    cmd_low = [0x40, addr_msb, addr_lsb, low_byte]
+    SPI_TRANSFER(cmd_low, 4 bytes)
+    
+    // Load high byte: 0x48 <addr_hi> <addr_lo> <data>
+    cmd_high = [0x48, addr_msb, addr_lsb, high_byte]
+    SPI_TRANSFER(cmd_high, 4 bytes)
+END FUNCTION
+@endcode
+
+@subsection avr_write_temporary_buffer_16_pseudo avr_write_temporary_buffer_16(word_address, word)
+
+@code{.unparsed}
+FUNCTION avr_write_temporary_buffer_16(word_address, word: uint16)
+    // Convenience wrapper for writing a 16-bit word
+    
+    low_byte = word AND 0xFF
+    high_byte = word >> 8
+    
+    CALL avr_write_temporary_buffer(word_address, low_byte, high_byte)
+END FUNCTION
+@endcode
+
+@subsection avr_flash_program_memory_pseudo avr_flash_program_memory(word_address)
+
+@code{.unparsed}
+FUNCTION avr_flash_program_memory(word_address)
+    // Commit page buffer to flash memory at specified page
+    
+    addr_msb = word_address >> 8
+    addr_lsb = word_address AND 0xFF
+    
+    // Write Program Memory Page: 0x4C <addr_hi> <addr_lo> 0x00
+    cmd = [0x4C, addr_msb, addr_lsb, 0x00]
+    SPI_TRANSFER(cmd, 4 bytes)
+    
+    // Wait for page write to complete (minimum 4.5ms)
+    DELAY(5 ms)
+END FUNCTION
+@endcode
+
+@subsection avr_read_program_memory_low_byte_pseudo avr_read_program_memory_low_byte(word_address)
+
+@code{.unparsed}
+FUNCTION avr_read_program_memory_low_byte(word_address) -> byte
+    // Read low byte of a program memory word
+    
+    addr_msb = word_address >> 8
+    addr_lsb = word_address AND 0xFF
+    
+    // Read Low Byte: 0x20 <addr_hi> <addr_lo> 0x00
+    cmd = [0x20, addr_msb, addr_lsb, 0x00]
+    response = SPI_TRANSFER(cmd, 4 bytes)
+    
+    RETURN response[3]
+END FUNCTION
+@endcode
+
+@subsection avr_read_program_memory_high_byte_pseudo avr_read_program_memory_high_byte(word_address)
+
+@code{.unparsed}
+FUNCTION avr_read_program_memory_high_byte(word_address) -> byte
+    // Read high byte of a program memory word
+    
+    addr_msb = word_address >> 8
+    addr_lsb = word_address AND 0xFF
+    
+    // Read High Byte: 0x28 <addr_hi> <addr_lo> 0x00
+    cmd = [0x28, addr_msb, addr_lsb, 0x00]
+    response = SPI_TRANSFER(cmd, 4 bytes)
+    
+    RETURN response[3]
+END FUNCTION
+@endcode
+
+@subsection avr_read_program_memory_pseudo avr_read_program_memory(word_address)
+
+@code{.unparsed}
+FUNCTION avr_read_program_memory(word_address) -> uint16
+    // Read complete 16-bit program word
+    
+    high_byte = CALL avr_read_program_memory_high_byte(word_address)
+    low_byte = CALL avr_read_program_memory_low_byte(word_address)
+    
+    word = (high_byte << 8) OR low_byte
+    RETURN word
+END FUNCTION
+@endcode
+
+@subsection avr_write_temporary_buffer_page_pseudo avr_write_temporary_buffer_page(data, data_len)
+
+@code{.unparsed}
+FUNCTION avr_write_temporary_buffer_page(data: uint16_array, data_len)
+    // Fill page buffer from an array of words
+    
+    IF data_len == 0:
+        RETURN
+    END IF
+    
+    FOR i FROM 0 TO data_len - 1:
+        CALL avr_write_temporary_buffer_16(i, data[i])
+    END FOR
+END FUNCTION
+@endcode
+
+@subsection avr_verify_program_memory_page_pseudo avr_verify_program_memory_page(page_address_start, expected_data, data_len)
+
+@code{.unparsed}
+FUNCTION avr_verify_program_memory_page(page_address_start, expected_data, data_len) -> boolean
+    // Verify programmed data by reading back and comparing
+    
+    FOR i FROM 0 TO data_len - 1:
+        actual_word = CALL avr_read_program_memory(page_address_start + i)
+        
+        IF actual_word != expected_data[i]:
+            RETURN false  // Verification failed
+        END IF
+    END FOR
+    
+    RETURN true  // All words verified successfully
+END FUNCTION
+@endcode
+
+*/
